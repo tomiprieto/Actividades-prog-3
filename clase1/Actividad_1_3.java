@@ -1,6 +1,6 @@
 package clase1;
 
-public class Actividad1_3 {
+public class Actividad_1_3 {
 	
 	public static int sumaRecursiva(int n, int suma) {
 		if (n<=0) {
