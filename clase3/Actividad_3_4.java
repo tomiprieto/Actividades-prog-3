@@ -2,7 +2,7 @@ package clase3;
 
 import java.util.Arrays;
 
-public class actividad_3_4 {
+public class Actividad_3_4 {
 	
 	public static int[] maximos(int [] lista, int cant, int i, int f) {
 		if (i==f) {
