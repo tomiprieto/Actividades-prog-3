@@ -57,13 +57,21 @@ public class Actividad_6_3 {
 		int beneficio_max = 0;
 		Arrays.sort(objetos, (a,b) -> Double.compare(b.ratio, a.ratio));
 		
+		ArrayList<Objeto> elegidos = new ArrayList<>();
+		
 		for (Objeto obj : objetos) {
 			if (obj.costo <= presupuesto) {
 				presupuesto -= obj.costo;
 				beneficio_max += obj.beneficio;
+				elegidos.add(obj);
 			} else {
 				break;
 			}
+		}
+		System.out.println("La mejor combinacion: " );
+		for (int i=0; i<=elegidos.size()-1; i++) {
+			System.out.println("\tProyecto: " + elegidos.get(i).id + ", Costo: " 
+				+ elegidos.get(i).costo + ", Beneficio: " + elegidos.get(i).beneficio);
 		}
 		return beneficio_max;
 	}
