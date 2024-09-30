@@ -26,7 +26,7 @@ public class Actividad_6_3 {
 		int mejor_combinacion = 0;
 		
 		//genero todas las combinaciones posibles
-		for (int i=0; i<(1<<n); i++) { //1<<n: desplazo 1 a la izq n veces para generar 2^n combinaciones
+		for (int i=0; i<(1<<n); i++) { 	//1<<n: desplazo 1 a la izq n veces para generar 2^n combinaciones
 			int beneficioTotal = 0;
 			int costoTotal = 0;
 			
@@ -37,13 +37,11 @@ public class Actividad_6_3 {
 					costoTotal += objetos.get(j).costo;
 				}
 			}
-		
 			if (costoTotal <= presupuesto && beneficioTotal > beneficio_max) {
 				beneficio_max = beneficioTotal;
 				mejor_combinacion = i;
 			}
 		}
-		
 		
 		//Traduzco la mejor_combinacion a los objetos elegidos con AND bit a bit
 		System.out.println("La mejor combinacion: " );
@@ -53,8 +51,6 @@ public class Actividad_6_3 {
 						+ objetos.get(j).beneficio + "");
 			}
 		}
-		
-		
 		return beneficio_max;
 	}
 	
