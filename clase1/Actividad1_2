@@ -1,0 +1,50 @@
+Actividad 1.2: Long y BigInteger.
+
+Utilizaría long para trabajar con números mayores al número máximo al que puede llegar int que es: 2.147.483.647.
+Por ejemplo lo usaría para hacer un programa que haga cálculos relacionados a la población mundial que es de aproximadamente 8.000.000.000.
+
+Por otro lado optaría por BigInteger para funciones matemáticas que operen con números muy grandes, ya que el tamaño de los números que se
+puedan ingresar usándolo depende de la capacidad de la computadora en la que se esté usando. Lo utilizaría para operar con números a los que 
+long no llegue, ya que su límite máximo es: 9.223.372.036.854.775.807.
+
+Lo usaría cálculos con números factoriales o exponenciales.
+Un caso sería hacer 30! = 265.252.859.812.191.058.636.308.480.000.000.
+Otro ejemplo es el de 2^100 = 1.267.650.600.228.229.401.496.703.205.376.
+
+Implementación del uso de long:
+
+package programacion3;
+
+public class Programacion3 {
+    
+    public static void main(String[] args) {
+        long numeroLong = 15000000000L;
+        System.out.println(numeroLong);
+    }
+}
+
+Implementación del uso de BigInteger:
+
+package programacion3;
+   
+import java.math.BigInteger;
+
+public class Programacion3 {
+    
+    public static void main(String[] args) {
+
+        // Creo los objetos de BigInteger
+        BigInteger numero1 = new BigInteger("123456789012345678901234567890");
+        BigInteger numero2 = new BigInteger("987654321098765432109876543210");
+        
+        // Muestro los números
+        System.out.println("Número 1: " + numero1);
+        System.out.println("Número 2: " + numero2);
+
+        // Sumo
+        BigInteger suma = numero1.add(numero2);
+        System.out.println("Suma: " + suma);
+    }
+} 
+
+El costo es: Constante en los de long y de BigInteger ya que se está realizando una asignación de valor.  
