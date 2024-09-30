@@ -1,0 +1,80 @@
+Actividad 4.2: Algoritmo Greedy con documentos.
+
+package programacion3;
+   
+import java.util.Scanner;
+import java.util.Arrays; 
+
+public class Programacion3 {
+    
+    public static void main(String[] args) {
+     
+        // Inicializar valores
+        int comprobantesCantidad = 0;
+        int comprobanteValor = 0;
+        int [] listaComprobantes = new int[10];
+        int comprobanteRecorrer = 0;
+        int montoMonedaExtranjera;
+        int montoAlcanzarMonedaExtranjera;
+        int posicion = 0;
+        String comprobanteTipo = new String();
+        String comprobanteTipoLista[] = new String[30];
+        
+        // Ingresar valores y contar cantidad de comprobantes.
+        while (comprobanteValor != -1){
+        Scanner leerEntero = new Scanner(System.in);
+        System.out.println("Introduce un valor de comprobante, en euros, -1 para finalizar: ");
+        comprobanteValor = leerEntero.nextInt();
+        
+        if (comprobanteValor != -1){
+        comprobantesCantidad++;
+        listaComprobantes[comprobantesCantidad] = comprobanteValor;
+        
+        // Ingresar el tipo de comprobante
+         Scanner leerTexto = new Scanner(System.in);
+         System.out.println("Introduce el tipo de comprobante: ");
+         comprobanteTipo = leerTexto.nextLine();
+         comprobanteTipoLista[comprobantesCantidad-1] = comprobanteTipo + " valor: " + Integer.toString(comprobanteValor) + " euros";
+        }
+    }
+        
+        // Ordeno la lista de menor a mayor
+        Arrays.sort(listaComprobantes);
+        
+        int [] listaOrdenadaInvertida = new int[10];
+        
+        for(int comprobanteRecorrerInverso = 9; comprobanteRecorrerInverso >= 0; comprobanteRecorrerInverso--){
+            listaOrdenadaInvertida[comprobanteRecorrer] = listaComprobantes[comprobanteRecorrerInverso];
+            comprobanteRecorrer++;
+        }        
+        
+        //El usuario ingresa el monto que tiene la moneda extranjera, que debe ser alcanzado con los comprobantes.
+        Scanner leerEnteroMonto = new Scanner(System.in);
+        System.out.println("Introduce el monto que quiera alcanzar: ");
+        montoMonedaExtranjera = leerEnteroMonto.nextInt();
+        montoAlcanzarMonedaExtranjera = montoMonedaExtranjera;
+        
+        //Algoritmo de resolución
+        int [] comprobantesOrdenados = new int[30];
+        
+        for(int recorrerLista = 0; recorrerLista < comprobantesCantidad; recorrerLista++){
+            while (montoAlcanzarMonedaExtranjera >= listaOrdenadaInvertida[recorrerLista]){
+                montoAlcanzarMonedaExtranjera -= listaOrdenadaInvertida[recorrerLista];
+                comprobantesOrdenados[posicion] = listaOrdenadaInvertida[recorrerLista];
+                posicion++;
+            }
+        }
+        
+        System.out.println("Sobraron " + montoAlcanzarMonedaExtranjera + " euros");
+        System.out.println("Lista de comprobantes, ordenados de mayor a menor:");      
+        System.out.println(Arrays.toString(listaComprobantes));
+        System.out.println("Lista de comprobantes, ordenadas segun fueron ingresadas:");
+        System.out.println(Arrays.toString(listaOrdenadaInvertida));
+        System.out.println("Lista de comprobantes utilizados para alcanzar el monto de " + montoMonedaExtranjera + " euros:");
+        System.out.println(Arrays.toString(comprobantesOrdenados));
+        System.out.println("Los comprobantes utilizados son: ");
+        System.out.println(Arrays.toString(comprobanteTipoLista));
+    }
+} 
+
+El costo es: O(n)
