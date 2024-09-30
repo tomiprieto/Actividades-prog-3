@@ -1,12 +1,12 @@
 k0									
-	 1	2	  3	  4 					
-1	 0  2	 INF	5					
-2	INF	0	 INF	4					
-3	INF	INF	0	 INF					
-4	INF	INF	2	  0					
+	 1	2	3	4 					
+1	 0      2	INF	5					
+2	INF	0	INF	4					
+3	INF	INF	0	INF					
+4	INF	INF	2	0					
 									
 k1									
-	1	2	3	4		     [1][J] < [1][1]+[1][J]			  En la fila y columna = k no hay cambios
+	1	2	3	4		     [1][J] < [1][1]+[1][J]	        En la fila y columna = k no hay cambios
 1	0	 2	INF	5		  [I][1] < [I][1] + [1][J]			
 2	INF	0	INF	4		  I=J => 0 < [I][K]+[K][J]		La diagonal siempre va a ser 0
 3	INF	INF	0	INF		[I][1] = INF =>			   
@@ -28,7 +28,7 @@ K3
 									
 K4									
 	1	 2	 3	 4					
-1	0	 2	 7	 5		[1][3] (INF) > [1][4]+[4][3] (5+2)			Se actualizan [1][3] y [2][3]
+1	0	 2	 7	 5		[1][3] (INF) > [1][4]+[4][3] (5+2)	Se actualizan [1][3] y [2][3]
 2	INF	0	 6	 4		[2][3] (INF) > [2][4]+[4][3] (4+2)			
 3	INF	INF	0	 INF					
 4	INF	INF	2	 0					
