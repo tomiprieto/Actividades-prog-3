@@ -1,0 +1,34 @@
+k0									
+	 1	2	  3	  4 					
+1	 0  2	 INF	5					
+2	INF	0	 INF	4					
+3	INF	INF	0	 INF					
+4	INF	INF	2	  0					
+									
+k1									
+	1	2	3	4		     [1][J] < [1][1]+[1][J]			  En la fila y columna = k no hay cambios
+1	0	 2	INF	5		  [I][1] < [I][1] + [1][J]			
+2	INF	0	INF	4		  I=J => 0 < [I][K]+[K][J]		La diagonal siempre va a ser 0
+3	INF	INF	0	INF		[I][1] = INF =>			   
+4	INF	INF	2	0			    [I][J] < INF + [1][J]		Como todas las salidas hacia 1 son INF, ninguna se actualiza
+									
+k2									
+	1	 2	 3	 4		[2][J] < [2][2]+[2][J]			Idem fila y columna = k
+1	0	 2	INF	 5		[I][2] < [I][2] + [2][J]			
+2	INF	0	INF	 4					
+3	INF	INF	0	INF		[3][2] y [4][2] = INF:			Como las salidas desde 3 y 4 hacia 2 son INF, ninguna se actualiza
+4	INF	INF	2	 0			[I][J] < INF + [I][J]		
+									
+K3									
+	1	 2	 3	 4					
+1	0	 2	INF	 5		[3][J] = INF:			        Como todas las salidas desde 3 son INF, ninguna se actualiza
+2	INF	0	INF	 4			[I][J] < [I][3] + INF		
+3	INF	INF	0	 INF					
+4	INF	INF	2	 0					
+									
+K4									
+	1	 2	 3	 4					
+1	0	 2	 7	 5		[1][3] (INF) > [1][4]+[4][3] (5+2)			Se actualizan [1][3] y [2][3]
+2	INF	0	 6	 4		[2][3] (INF) > [2][4]+[4][3] (4+2)			
+3	INF	INF	0	 INF					
+4	INF	INF	2	 0					
