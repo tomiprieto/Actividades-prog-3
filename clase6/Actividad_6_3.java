@@ -42,7 +42,6 @@ public class Actividad_6_3 {
 				mejor_combinacion = i;
 			}
 		}
-		
 		//Traduzco la mejor_combinacion a los objetos elegidos con AND bit a bit
 		System.out.println("La mejor combinacion: " );
 		for (int j=0; j<n; j++) {
@@ -58,14 +57,11 @@ public class Actividad_6_3 {
 		int beneficio_max = 0;
 		Arrays.sort(objetos, (a,b) -> Double.compare(b.ratio, a.ratio));
 		
-		
 		for (Objeto obj : objetos) {
-			
 			if (obj.costo <= presupuesto) {
 				presupuesto -= obj.costo;
 				beneficio_max += obj.beneficio;
-			}
-			else {
+			} else {
 				break;
 			}
 		}
