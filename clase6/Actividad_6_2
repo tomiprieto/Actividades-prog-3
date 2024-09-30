@@ -8,14 +8,14 @@ Valor	4	2	1	6
 capacidad maxima = 10						
 						
 comb	peso	valor				
-_0000	  0	    0				
+_0000	  0	0				
 _0001	  7    	6				
 _0010	  6    	1				
 _0011	  13  	7			excede
 _0100	  5    	2				
-_0101	  12	  8			excede
+_0101	  12	8			excede
 _0110	  11  	3			excede
-_0111	  18	  9			excede
+_0111	  18	9			excede
 _1000	  2    	4				
 _1001	  9    	10		mejor valor total = 10		
 _1010	  8    	5				
