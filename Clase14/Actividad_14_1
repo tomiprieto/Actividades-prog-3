@@ -1,1 +1,8 @@
+Clase 14, ejercicio 1:
 
+El problema del viajante enuncia que se debe encontrar el camino mas corto para conectar cierta cantidad de ciudades, la complejidad
+de resolver este algoritmo en caso de usar fuerza bruta es de (N-1)!/2, se divide a la mitad ya que es un grafo no dirigido. En caso
+de ser 15 ciudades, la cantidad de caminos posibles es de 653837184000, es por esto que se trata de un problema np, es decir, que no
+se puede resolver en tiempo polinómico. Entre los algoritmos heurísticos se encuentra el algoritmo del vecino más próximo (greedy) que
+busca el nodo más cercano que aún no haya sido visitado. A su vez hay otros algoritmos como el de colonia de hormigas que se basa en el
+rastro que dejan las hormigas al pasar por un lugar y las hormigas que le siguen tomaran ese u otro camino según cual sea más corto.
