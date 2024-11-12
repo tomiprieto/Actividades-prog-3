@@ -1,3 +1,10 @@
+//Clase 13, ejercicio 2: 
+
+/*
+Para modificar el tamaño del tablero y la cantidad de celdas en los subcuadrantes se deben modificar las constantes que contienen estos valores, en el código
+del repositorio son SIZE Y SUBGRID_SIZE.
+*/
+
 package programacion3parcial2;
 
 import java.util.Random;
